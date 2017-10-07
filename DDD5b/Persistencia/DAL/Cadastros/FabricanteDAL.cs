@@ -14,7 +14,7 @@ namespace Persistencia.DAL.Cadastros
 
         public IQueryable<Fabricante> ObterFabricanteClassificadasPorNome()
         {
-            return context.Fabricante.OrderBy(b => b.Nome);
+            return context.Fabricantes.OrderBy(b => b.Nome);
         }
     }
 }

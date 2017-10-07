@@ -18,9 +18,9 @@ namespace Persistencia.Contexts
         }
         public DbSet<Categoria> Categorias { get; set; }
 
-        public DbSet<Fabricante> Fabricante { get; set; }
+        public DbSet<Fabricante> Fabricantes { get; set; }
 
-        public DbSet<Produto> Produto { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
