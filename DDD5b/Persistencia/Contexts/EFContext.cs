@@ -1,12 +1,7 @@
 ﻿using Modelo.Cadastros;
 using Modelo.Tabelas;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistencia.Contexts
 {
@@ -14,7 +9,7 @@ namespace Persistencia.Contexts
     {
         public EFContext() : base("DefaultConnection")
         {
-
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EFContext, Migrations.Configuration>());
         }
         public DbSet<Categoria> Categorias { get; set; }
 
